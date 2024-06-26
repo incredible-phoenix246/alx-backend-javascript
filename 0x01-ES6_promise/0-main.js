@@ -1,21 +1,10 @@
-import getFullResponseFromAPI from "./1-promise.js";
+import signUpUser from "./4-user-promise.js";
 
-console.log(getFullResponseFromAPI(true));
-console.log(getFullResponseFromAPI(false));
+const promise = signUpUser("Bob", "Dylan");
 
-// Handling promises
-getFullResponseFromAPI(true)
-  .then((response) => {
-    console.log("Resolved:", response);
-  })
-  .catch((error) => {
-    console.error("Rejected:", error);
-  });
+promise.then((user) => {
+  console.log(user);
+});
 
-getFullResponseFromAPI(false)
-  .then((response) => {
-    console.log("Resolved:", response);
-  })
-  .catch((error) => {
-    console.error("Rejected:", error);
-  });
+// Alternatively, you can log the promise itself to see the output
+console.log(promise);
