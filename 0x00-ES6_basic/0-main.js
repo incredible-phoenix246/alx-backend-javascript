@@ -1,4 +1,6 @@
-import returnHowManyArguments from "./4-rest-parameter.js";
+import getFullBudgetObject from "./9-getFullBudget.js";
 
-console.log(returnHowManyArguments("one"));
-console.log(returnHowManyArguments("one", "two", 3, "4th"));
+const fullBudget = getFullBudgetObject(20, 50, 10);
+
+console.log(fullBudget.getIncomeInDollars(fullBudget.income));
+console.log(fullBudget.getIncomeInEuros(fullBudget.income));
